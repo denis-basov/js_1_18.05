@@ -176,3 +176,83 @@ for(let hobby of hobbies){
 hobbies.forEach(function(hobby, index){
     console.log(`${index + 1}. ${hobby}`);
 });*/
+
+// 4. Напишите функцию, которая принимает на вход массив строк, 
+// формирует из него одну строку и возвращает эту строку.
+/*
+let hobbies = ['Плавать', 'Есть', 'Гулять', 'Играть на флейте', 'Играть на баяне'];
+
+function arrToStr(arr){
+    // let str = arr.join(', ');
+
+    let str = '';
+    for(let item of arr){
+        str += item + ', ';
+    }
+
+    return str;
+}
+let hobbiesStr = arrToStr(hobbies);
+console.log(hobbiesStr);
+
+//console.log(arrToStr(hobbies));
+*/
+
+// foreach
+/*
+let hobbies = ['Плавать', 'Есть', 'Гулять', 'Играть на флейте', 'Играть на баяне'];
+
+function arrToStr(arr){
+
+    let str = '';
+    
+    arr.forEach(function(value){
+        str += value + ', ';
+    });
+
+    return str;
+}
+let hobbiesStr = arrToStr(hobbies);
+console.log(hobbiesStr);
+*/
+
+/*
+// map - сборать массив параграфов, в каждом из них должна быть строка с хобби
+let hobbies = ['Плавать', 'Есть', 'Гулять', 'Играть на флейте', 'Играть на баяне'];
+
+let hobbiesHTML = hobbies.map(function(value, index){
+        return `<p>${index + 1}: ${value}</p>`;
+});
+
+console.log(hobbiesHTML);
+*/
+
+// стрелочные функции
+// let hobbiesHTML = hobbies.map((value) => `<p>${value}</p>`);
+// console.log(hobbiesHTML);
+
+/*
+// reduce
+let hobbies = ['Плавать', 'Есть', 'Гулять', 'Играть на флейте', 'Играть на баяне'];
+
+// собрать массив в строку
+let hobbiesStr = hobbies.reduce(function(accumulator, hobby){
+    return `${accumulator} ${hobby}, `;
+}, '');
+
+console.log(hobbiesStr);
+*/
+    
+// let str = '';
+// for(let hobby of hobbies){
+//     str += hobby + ', ';
+// }
+
+/*
+let numbers = [1,2,3,4,5];
+
+let sum = numbers.reduce(function(accumulator, number){
+    return accumulator + number;
+}, 0);
+
+console.log(sum);*/
